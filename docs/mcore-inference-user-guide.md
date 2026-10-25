@@ -821,7 +821,7 @@ torchrun --standalone --nproc-per-node=2 \
     examples/inference/launch_inference_server.py \
     "${MODEL_ARGS[@]}" \
     --inference-shards 'tp=1,role=prefill+tp=1,role=decode' \
-    --inference-dynamic-batching-enable-prefix-caching \
+    --inference-dynamic-batching-prefix-caching \
     --disagg-kv-transport-backend nccl \
     --port 5000
 ```
